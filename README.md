@@ -22,6 +22,7 @@ Then open <http://localhost:4000/hjalte/>. `--drafts` also shows the posts in `_
 | Unpublished posts | `_drafts/` (never on the live site) |
 | Projects, Blog, About, Contact pages | `_pages/` |
 | Menu, hero, "What I do", social links | `_data/settings.yml` |
+| Plugins on the front page | `_data/plugins.yml`, pictures in `images/plugins/` |
 | Styles / scripts | `assets/css/main.css`, `assets/js/main.js` |
 | Card and hero images | `images/thumbs/` (made by `tools/make-thumbs.sh`) |
 

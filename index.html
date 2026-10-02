@@ -83,6 +83,34 @@ body_class: home
   </div>
 </section>
 
+<!-- PLUGINS -->
+<section class="section section--flush-top" id="plugins">
+  <div class="container">
+    <div class="section-head section-head--row reveal">
+      <div>
+        <p class="kicker">Robotic Audio</p>
+        <h2 class="section-title">Plugins</h2>
+        <p class="section-lead">The instruments and effects I'm building as Robotic Audio. In development, for AU, VST3 and standalone.</p>
+      </div>
+      <a class="btn btn--ghost" href="https://roboticaudio.com/">roboticaudio.com <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="plugin-grid">
+      {% for plugin in site.data.plugins %}
+      <article class="plugin-card reveal">
+        <div class="plugin-card__media">
+          <img src="{{ plugin.image | relative_url }}" alt="The {{ plugin.name }} plugin window" loading="lazy" decoding="async">
+        </div>
+        <div class="plugin-card__body">
+          <span class="plugin-card__type">{{ plugin.kind }}</span>
+          <h3 class="plugin-card__title">{{ plugin.name }}</h3>
+          <p class="plugin-card__text">{{ plugin.text }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <!-- WHAT I DO -->
 <section class="section section--surface">
   <div class="container">
