@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+{% comment %} Previous / next follow the order of the Projects page (newest first) and wrap round. {% endcomment %}
+{% assign projects = site.projects | sort: "date" | reverse %}
+{% for item in projects %}
+  {% if item.url == page.url %}
+    {% assign idx = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+{% assign count = projects.size %}
+{% assign prev_idx = idx | minus: 1 | plus: count | modulo: count %}
+{% assign next_idx = idx | plus: 1 | modulo: count %}
+{% assign prev = projects[prev_idx] %}
+{% assign next = projects[next_idx] %}
+
+<section class="project-hero">
+  <div class="project-hero__media">
+    {% if page.image %}<img src="{% include image-url.html doc=page size='hero' %}" alt="{{ page.title | escape }}" fetchpriority="high">{% endif %}
+  </div>
+  <div class="project-hero__content">
+    <a class="back-link" href="{{ '/projects/' | relative_url }}"><i class="fa-solid fa-arrow-left"></i> All projects</a>
+    <p class="kicker">Project <span class="kicker__count">{{ idx | plus: 1 | prepend: '0' | slice: -2, 2 }} / {{ count | prepend: '0' | slice: -2, 2 }}</span></p>
+    <h1 class="project-hero__title">{{ page.title }}</h1>
+    {% if page.description %}<p class="project-hero__lead">{{ page.description }}</p>{% endif %}
+    {% if page.tags.size > 0 %}
+    <ul class="tag-list">
+      {% for tag in page.tags %}
+      <li><a class="tag" href="{{ '/projects/' | relative_url }}?tag={{ tag | slugify }}">{{ tag | replace: "-", " " }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</section>
+
+<article class="prose">
+  {{ content }}
+</article>
+
+<nav class="pager" aria-label="More projects">
+  <a class="pager__link" href="{{ prev.url | relative_url }}">
+    {% if prev.image %}<img src="{% include image-url.html doc=prev size='card' %}" alt="" loading="lazy">{% endif %}
+    <span class="pager__label"><i class="fa-solid fa-arrow-left"></i> Previous</span>
+    <span class="pager__title">{{ prev.title }}</span>
+  </a>
+  <a class="pager__link pager__link--next" href="{{ next.url | relative_url }}">
+    {% if next.image %}<img src="{% include image-url.html doc=next size='card' %}" alt="" loading="lazy">{% endif %}
+    <span class="pager__label">Next <i class="fa-solid fa-arrow-right"></i></span>
+    <span class="pager__title">{{ next.title }}</span>
+  </a>
+</nav>

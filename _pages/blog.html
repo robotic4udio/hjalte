@@ -1,0 +1,28 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+description: Notes on sound, instruments, code and work in progress by Hjalte Bested Hjorth.
+---
+
+<section class="page-hero page-hero--plain">
+  <div class="page-hero__content">
+    <p class="kicker">Notes · Process · Work in progress</p>
+    <h1 class="page-hero__title">Blog</h1>
+    <p class="page-hero__lead">Writing about sound, instruments and the code behind them.</p>
+  </div>
+</section>
+
+<section class="listing">
+  <div class="container">
+    {% if site.posts.size > 0 %}
+      {% include post-list.html %}
+    {% else %}
+      <div class="empty-state">
+        <h2>Nothing here yet</h2>
+        <p>The first posts are on their way. Until then, have a look at the projects.</p>
+        <a class="btn btn--ghost" href="{{ '/projects/' | relative_url }}">See the projects <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    {% endif %}
+  </div>
+</section>

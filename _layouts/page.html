@@ -2,35 +2,17 @@
 layout: default
 ---
 
-<!-- begin hero -->
-{% if page.image %}
-<section class="hero">
-  <div class="hero__inner">
-    <div class="hero__image">
-      <img class="lazy" data-src="{{ page.image | relative_url }}" alt="{{ page.title }}">
-    </div>
-    <div class="hero__content">
-      <h1 class="hero__title">{{ page.title }}</h1>
-    </div>
+<section class="page-hero{% unless page.image %} page-hero--plain{% endunless %}">
+  {% if page.image %}
+  <img class="page-hero__image" src="{{ page.image | relative_url }}" alt="" fetchpriority="high">
+  {% endif %}
+  <div class="page-hero__content">
+    {% if page.kicker %}<p class="kicker">{{ page.kicker }}</p>{% endif %}
+    <h1 class="page-hero__title">{{ page.title }}</h1>
+    {% if page.lead %}<p class="page-hero__lead">{{ page.lead }}</p>{% endif %}
   </div>
 </section>
-{% else %}
-<section class="hero-without-image">
-  <div class="hero-inner">
-    <div class="hero-content">
-      <h1 class="hero__title">{{ page.title }}</h1>
-    </div>
-  </div>
-</section>
-{% endif %}
-<!-- begin hero -->
 
-<!-- begin page -->
-<div class="container">
-  <article class="page animate">
-    <div class="page__content">
-      {{ content }}
-    </div>
-  </article>
-</div>
-<!-- end page -->
+<article class="prose">
+  {{ content }}
+</article>

@@ -1,20 +1,133 @@
 ---
 layout: default
-image: '/images/tromleorkestret/TrorkMVo1.jpg'
+title: Hjalte Bested Hjorth
+body_class: home
 ---
 
-{% include hero.html %}
+{% assign hero = site.data.settings.hero %}
+{% assign projects = site.projects | sort: "date" | reverse %}
 
-{% include featured-posts.html %}
-
-<div class="container">
-  <div class="row grid">
-    {% if site.posts.size > 0 %}
-      {% for post in paginator.posts %}
-        {% include article-content.html %}
-      {% endfor %}
-    {% endif %}
+<!-- HERO -->
+<section class="hero">
+  <div class="hero__media">
+    <img src="{{ hero.image | relative_url }}" alt="{{ hero.image_alt | escape }}" fetchpriority="high">
   </div>
-</div>
+  <div class="hero__content">
+    <p class="kicker">{{ hero.kicker }}</p>
+    <h1 class="hero__title">
+      <span>Hjalte</span><span>Bested Hjorth</span>
+    </h1>
+    <p class="hero__lead">{{ hero.lead }}</p>
+    <div class="hero__actions">
+      <a class="btn btn--fire" href="#projects">See the projects <i class="fa-solid fa-arrow-down"></i></a>
+      <a class="btn btn--ghost" href="{{ '/about/' | relative_url }}">About me</a>
+    </div>
+  </div>
+  <a class="hero__scroll" href="#intro" aria-label="Scroll down"><span></span></a>
+  {% if hero.credit %}<p class="hero__credit">{{ hero.credit }}</p>{% endif %}
+</section>
 
-{% include pagination.html %}
+<!-- INTRO -->
+<section class="section intro" id="intro">
+  <div class="container intro__grid">
+    <div class="reveal">
+      <p class="intro__statement">
+        I blend <span class="fire-text">art, music and technology</span> into immersive, one-of-a-kind experiences.
+      </p>
+      <p class="intro__text">
+        Robotic instruments, interactive sound installations and music for theatre, podcasts and art,
+        with the tools to make them built and coded by hand.
+      </p>
+      <a class="text-link" href="{{ '/about/' | relative_url }}">More about me <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="intro__photo reveal">
+      <img src="{{ '/images/tromleorkestret/AarhusHjalte.jpg' | relative_url }}" alt="Hjalte playing live, lit by stage lights" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section section--flush-top" id="projects">
+  <div class="container">
+    <div class="section-head section-head--row reveal">
+      <div>
+        <p class="kicker">Selected work</p>
+        <h2 class="section-title">Projects</h2>
+      </div>
+      <a class="btn btn--ghost" href="{{ '/projects/' | relative_url }}">All {{ projects.size }} projects <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    {% comment %}
+      Two wide cards first: the projects with "featured: true", or the two newest when none are.
+      Then the six newest of the rest.
+    {% endcomment %}
+    {% assign leads = projects | where: "featured", true %}
+    {% if leads.size == 0 %}{% assign leads = projects %}{% endif %}
+    {% assign lead_urls = "|" %}
+    <div class="project-grid project-grid--home">
+      {% for item in leads limit: 2 %}
+        {% include project-card.html project=item big=true %}
+        {% assign lead_urls = lead_urls | append: item.url | append: "|" %}
+      {% endfor %}
+      {% assign shown = 0 %}
+      {% for item in projects %}
+        {% assign key = "|" | append: item.url | append: "|" %}
+        {% unless lead_urls contains key %}
+          {% if shown < 6 %}
+            {% include project-card.html project=item %}
+            {% assign shown = shown | plus: 1 %}
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I DO -->
+<section class="section section--surface">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="kicker">What I do</p>
+      <h2 class="section-title">Sound, built from the ground up</h2>
+    </div>
+    <div class="feature-grid">
+      {% for service in site.data.settings.services %}
+      <a class="feature reveal" href="{{ '/projects/' | relative_url }}?tag={{ service.tag | slugify }}">
+        <i class="{{ service.icon }}" aria-hidden="true"></i>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.text }}</p>
+        <span class="feature__more">See projects <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- BLOG (appears with the first post) -->
+{% if site.posts.size > 0 %}
+<section class="section" id="blog">
+  <div class="container">
+    <div class="section-head section-head--row reveal">
+      <div>
+        <p class="kicker">Blog</p>
+        <h2 class="section-title">Latest writing</h2>
+      </div>
+      <a class="btn btn--ghost" href="{{ '/blog/' | relative_url }}">All posts <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    {% include post-list.html limit=3 %}
+  </div>
+</section>
+{% endif %}
+
+<!-- CONTACT -->
+<section class="section cta{% if site.posts.size > 0 %} section--flush-top{% endif %}">
+  <div class="container reveal">
+    <p class="kicker">Collaborations · Commissions · Hello</p>
+    <h2 class="cta__title">Let's create something <span class="fire-text">extraordinary</span></h2>
+    <p class="cta__text">Have a project, an idea or a stage that needs sound? I'm always up for exploring new ideas.</p>
+    <div class="cta__actions">
+      <a class="btn btn--fire" href="{{ '/contact/' | relative_url }}">Get in touch</a>
+      <a class="btn btn--ghost" href="mailto:{{ site.data.settings.email }}"><i class="fa-regular fa-envelope"></i> {{ site.data.settings.email }}</a>
+    </div>
+  </div>
+</section>

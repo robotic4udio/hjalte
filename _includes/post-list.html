@@ -1,0 +1,22 @@
+{% comment %}
+  Blog posts as a list: {% include post-list.html %} (optional limit=3).
+{% endcomment %}
+{% assign list_limit = include.limit | default: 1000 %}
+<ul class="post-list">
+  {% for post in site.posts limit: list_limit %}
+  <li class="reveal">
+    <a class="post-row" href="{{ post.url | relative_url }}">
+      <time class="post-row__date" datetime="{{ post.date | date_to_xmlschema }}">
+        <span class="post-row__day">{{ post.date | date: "%-d" }}</span>
+        <span class="post-row__month">{{ post.date | date: "%b %Y" }}</span>
+      </time>
+      <span class="post-row__info">
+        <span class="post-row__title">{{ post.title }}</span>
+        <span class="post-row__text">{{ post.description | default: post.excerpt | strip_html | truncate: 180 }}</span>
+      </span>
+      {% if post.image %}<img class="post-row__image" src="{% include image-url.html doc=post size='card' %}" alt="" loading="lazy" decoding="async">{% endif %}
+      <i class="post-row__arrow fa-solid fa-arrow-right" aria-hidden="true"></i>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

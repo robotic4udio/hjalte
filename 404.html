@@ -1,17 +1,14 @@
 ---
-layout: page
 title: Page not found
-image: '/images/tromleorkestret/mv/Madness.jpg'
+kicker: Error 404
+lead: This page has moved or doesn't exist.
 permalink: /404.html
+layout: page
+image: '/images/tromleorkestret/mv/Madness.jpg'
+sitemap: false
 ---
 
-<div class="container">
-  <div class="row">
-    <div class="col col-12" style="text-align: center">
-      <h2 style="font-size: 48px">404</h2>
-      <p>The requested page could not be found.</p>
-      <p><a href="{{site.baseurl}}/" class="button button--middle" style="text-decoration: none; border: none">Back to the blog</a></p>
-      <hr>
-    </div>
-  </div>
-</div>
+<p class="center">
+  <a class="btn btn--fire" href="{{ '/' | relative_url }}">Back to the front page</a>
+  <a class="btn btn--ghost" href="{{ '/projects/' | relative_url }}">See the projects</a>
+</p>

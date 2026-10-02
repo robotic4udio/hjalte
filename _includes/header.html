@@ -1,63 +1,27 @@
-{% if page.id %}
-  {% assign class = '' %}
-  {% elsif page.url contains 'tag' %}
-  {% assign class = '' %}
-  {% else %}
-  {% assign class = 'header--top' %}
-{% endif %}
+<header class="site-header" data-header>
+  <div class="site-header__inner">
+    <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="{{ site.data.settings.title }} – home">
+      Hjalte <span>Bested Hjorth</span>
+    </a>
 
-<!-- begin header -->
-<header class="header {{ class }}">
-  <div class="container">
-    <div class="row">
-      <div class="header__inner col col-12">
-
-      <div class="logo">
-        <a class="logo__link" href="{{ site.baseurl }}/">
-        {% if site.data.settings.logo %}
-          <img class="logo__image" src="{{ site.data.settings.logo | relative_url }}" alt="{{ site.data.settings.title }}">
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        {% for item in site.data.settings.menu-items %}
+        {% if item.external %}
+        <li><a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
         {% else %}
-          {{ site.data.settings.title }}
+        {% assign active = false %}
+        {% if page.url contains item.url %}{% assign active = true %}{% endif %}
+        {% if page.collection == 'projects' and item.url == '/projects/' %}{% assign active = true %}{% endif %}
+        <li><a href="{{ item.url | relative_url }}"{% if active %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
         {% endif %}
-        </a>
-      </div>
+        {% endfor %}
+      </ul>
+      <a class="btn btn--fire site-nav__cta" href="{{ '/contact/' | relative_url }}">Get in touch</a>
+    </nav>
 
-      <div class="menu-overlay">
-        <nav class="main-nav">
-          <div class="main-nav__box">
-            <div class="nav__icon-close">
-              <i class="fa-solid fa-xmark"></i>
-            </div>
-            <div class="nav-grid">
-              <div class="nav-grid__item">
-                <h2 class="nav-grid__title">Menu</h2>
-                <div class="mobile-nav">
-                  {% include navigation.html %}
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-
-      <div class="navigation">
-        <div class="top-nav">
-          {% include navigation.html %}
-        </div>
-      </div>
-
-      <div class="nav-buttons">
-        <i class="nav__icon nav__icon-menu fa-solid fa-bars"></i>
-        <div class="search-button">
-          <i class="nav__icon nav__icon-search fa-solid fa-magnifying-glass"></i>
-          <span>Search</span>
-        </div>
-      </div>
-
-      </div>
-    </div>
+    <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu" data-nav-toggle>
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
-<!-- end header -->
-
-{% include search.html %}
