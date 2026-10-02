@@ -10,7 +10,7 @@ body_class: home
 <!-- HERO -->
 <section class="hero">
   <div class="hero__media">
-    <img src="{{ hero.image | relative_url }}" alt="{{ hero.image_alt | escape }}" fetchpriority="high">
+    <img src="{{ hero.image | relative_url }}" alt="{{ hero.image_alt | escape }}"{% if hero.position %} style="object-position: {{ hero.position }}"{% endif %} fetchpriority="high">
   </div>
   <div class="hero__content">
     <p class="kicker">{{ hero.kicker }}</p>

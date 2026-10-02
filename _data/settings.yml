@@ -5,7 +5,7 @@ tagline: Composer, sound designer and creative technologist
 description: Hjalte Bested Hjorth – composer, sound designer and creative technologist. Sound installations, robotic instruments, music for theatre and podcasts, and teaching.
 email: hjalte.bested.hjorth@gmail.com
 phone: '+45 23 28 29 26'
-image: '/images/tromleorkestret/TromleJul1-E1.jpg' # Default image used when sharing links on social media
+image: '/images/hjalte/hero-byggefestival-2025.jpg' # Default image used when sharing links on social media
 
 
 #-------------------------------
@@ -27,8 +27,10 @@ menu-items:
 hero:
   kicker: Music · Machines · Code
   lead: Composer, sound designer and <em>creative technologist</em>.
-  image: '/images/tromleorkestret/TromleJul1-E1.jpg'
-  image_alt: Hjalte in a top hat behind Tromleorkestret's music machine, lit in blue and amber
+  image: '/images/hjalte/hero-byggefestival-2025.jpg'
+  image_alt: Hjalte in a top hat and coat at Tromleorkestret's music machine, a blue flame rising beside him
+  position: 72% 30%   # which part of the photo stays in view when it is cropped (across, down)
+  credit: 'Byggefestivalen 2025 · Photo: Pato Soto'
 
 
 #-------------------------------
