@@ -1,0 +1,17 @@
+{% comment %}
+  One project as a card: {% include project-card.html project=item %}
+  Optional: big=true (wide card, used for the first two on the front page).
+{% endcomment %}
+{% assign card = include.project %}
+{% capture card_tags %}{% for tag in card.tags %}{{ tag | slugify }} {% endfor %}{% endcapture %}
+<a class="project-card{% if include.big %} project-card--big{% endif %} reveal" href="{{ card.url | relative_url }}" data-tags="{{ card_tags | strip }}">
+  <div class="project-card__media">
+    {% if card.image %}<img src="{% include image-url.html doc=card size='card' %}" alt="" loading="lazy" decoding="async">{% endif %}
+  </div>
+  <div class="project-card__body">
+    <span class="project-card__type">{% for tag in card.tags limit: 3 %}{{ tag | replace: "-", " " }}{% unless forloop.last %} · {% endunless %}{% endfor %}</span>
+    <h3 class="project-card__title">{{ card.title }}</h3>
+    <p class="project-card__text">{{ card.description }}</p>
+    <span class="project-card__more">View project <i class="fa-solid fa-arrow-right"></i></span>
+  </div>
+</a>

@@ -1,11 +1,13 @@
-{% if site.data.settings.social %}
-<div class="social">
-  <ul class="social__list list-reset">
-    {% for social in site.data.settings.social %}
-    <li class="social__item">
-      <a class="social__link" href="{{ social.link }}" target="_blank" rel="noopener" aria-label="{{ social.name }} link"><i class="{{ social.icon }}"></i></a>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+{% comment %}
+  Usage: {% include social-links.html %}                      – the site's links
+         {% include social-links.html list="social-hjalte" %} – any list from _data/settings.yml
+{% endcomment %}
+{% assign list_name = include.list | default: "social" %}
+{% assign links = site.data.settings[list_name] %}
+{% if links %}
+<ul class="social">
+  {% for social in links %}
+  <li><a href="{{ social.link }}" target="_blank" rel="noopener" aria-label="{{ social.name }}" title="{{ social.name }}"><i class="{{ social.icon }}"></i></a></li>
+  {% endfor %}
+</ul>
 {% endif %}

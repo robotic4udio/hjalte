@@ -1,0 +1,11 @@
+{%- comment -%}
+  Prints the address of a project's or post's image in a web-friendly size:
+  {% include image-url.html doc=project size="card" %}  – images/thumbs/<file-name>.jpg
+  {% include image-url.html doc=page size="hero" %}     – images/thumbs/<file-name>-hero.jpg
+  Falls back to the original image when tools/make-thumbs.sh hasn't made that size yet.
+{%- endcomment -%}
+{%- assign img_name = include.doc.slug -%}
+{%- if include.size == "hero" -%}{%- assign img_name = img_name | append: "-hero" -%}{%- endif -%}
+{%- assign img_path = "/images/thumbs/" | append: img_name | append: ".jpg" -%}
+{%- assign img_found = site.static_files | where: "path", img_path | size -%}
+{%- if img_found > 0 -%}{{ img_path | relative_url }}{%- else -%}{{ include.doc.image | relative_url }}{%- endif -%}

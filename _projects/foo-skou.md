@@ -1,0 +1,71 @@
+---
+layout: project
+date: 2023-08-01
+title:  The Rings of Saturn
+description: Creating an interactive sound installation with FOO/SKOU at the Planetarium in Copenhagen
+image:  '/images/fooskou/IMG_1286.jpg'
+tags:   [Creative-Tech, Music, Sound-Design, Art, Bela]
+featured: false
+---
+
+I collaborated with the Danish artist duo **FOO/SKOU** on innovative sound art installations that integrate **thermal cameras** and the **Bela platform** to create interactive and immersive auditory experiences.
+
+![]({{site.baseurl}}/images/fooskou/Press.jpeg)
+*FOO/SKOU - The Rings of Saturn*
+
+
+# Project Overview
+
+Our joint projects focused on capturing real-time thermal data from the environment and translating it into dynamic soundscapes. By utilizing thermal cameras, we were able to detect temperature variations caused by human presence and motion. This thermal information was then processed through custom audio software running on the Bela platform, known for its low-latency audio processing capabilities, to generate responsive audio outputs. The thermal data influenced various sound parameters, such as pitch, time, volume, and timbre, creating an interactive sonic environment that evolved based on the movements and interactions of participants. The basis of the sound scape consisted of a singer that ahs recorded a series of vocal harmonies that represented each of the rings of Saturn. The installation was set up in the Planetarium in Copenhagen, where the audience could explore the auditory landscape by moving through the space and observing the effects of their presence on the sound environment.
+
+
+![]({{site.baseurl}}/images/fooskou/rings-gif.gif)
+*Interactive Sound Installation - The Rings of Saturn*
+
+# Testwalk
+The video below shows a testwalk of the installation, where the thermal cameras are tracking the heat signatures of the participants and the Bela platform is processing the data to create a dynamic soundscape. I walked through the installation to test system and observe how the sound parameters changed based on my movements and thermal interactions.
+
+<p><iframe src="https://drive.google.com/file/d/1SVUQhkqGOuhNJheu3la9V4-LlmOOVMrC/preview" allow="autoplay" frameborder="0"></iframe></p>
+
+# The Rings
+<div class="gallery-box">
+  <div class="gallery">
+    <img src="{{site.baseurl}}/images/fooskou/Exp1.avif">
+    <img src="{{site.baseurl}}/images/fooskou/Exp2.avif">
+    <img src="{{site.baseurl}}/images/fooskou/Exp3.avif">
+    <img src="{{site.baseurl}}/images/fooskou/Exp4.avif">
+    <img src="{{site.baseurl}}/images/fooskou/Exp5.avif">
+    <img src="{{site.baseurl}}/images/fooskou/Exp6.avif">
+    <img src="{{site.baseurl}}/images/fooskou/Exp7.avif">
+    <img src="{{site.baseurl}}/images/fooskou/Exp8.avif">
+    <img src="{{site.baseurl}}/images/fooskou/Exp9.avif">
+  </div>
+</div>
+
+# Technical Implementation
+
+- **Thermal Cameras**: We employed thermal imaging devices to monitor temperature fluctuations within the installation space. These cameras provided continuous thermal data streams, capturing the heat signatures of participants and ambient conditions.
+
+- **Bela Platform**: The thermal data was fed into the Bela platform, which processed the information in real-time. Bela's high-performance audio processing allowed us to map temperature changes to various sound parameters, such as pitch, volume, and timbre, creating an immediate auditory response to thermal variations.
+
+![]({{site.baseurl}}/images/fooskou/tech_overview.png)
+*Technical Overview of a single ring in the Installation, there was 7 rings*
+
+# Artistic Expression
+
+The integration of thermal cameras and Bela enabled the creation of soundscapes that were directly influenced by the presence and movement of individuals within the space. As participants moved through the installation, their body heat altered the thermal readings, which in turn modulated the generated sounds. This setup fostered a unique interaction between the audience and the artwork, as the sound environment evolved based on human activity and environmental factors.
+
+# Challenges and Innovations
+
+One of the primary challenges was calibrating the infrared cameras to detect only human presence while rejecting other temperature variations. We developed custom algorithms to differentiate between human heat signatures and other thermal noise, ensuring that the system responded accurately to participants' movements. This calibration was crucial for creating a responsive and immersive soundscape that truly reflected the presence and actions of the audience.
+
+# Impact and Reception
+
+The resulting installations offered participants an immersive experience where they could perceive the usually invisible thermal aspects of their environment through sound. This fusion of technology and art invited audiences to explore the interplay between their physical presence and the auditory landscape, leading to heightened awareness of their surroundings and their impact on the installation.
+
+Collaborating with FOO/SKOU on these projects allowed us to push the boundaries of interactive sound art, demonstrating how emerging technologies like thermal imaging and platforms like Bela can be harnessed to create responsive and engaging artistic experiences. 
+
+
+![]({{site.baseurl}}/images/fooskou/IMG_1286.jpg#wide)
+
+<hr>

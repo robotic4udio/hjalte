@@ -1,26 +1,28 @@
-<!-- begin footer-widgets -->
-<section class="footer-widgets">
-  <div class="container">
-    <div class="row">
-      {% include footer-widgets/widget-recent-posts.html %}
-      {% include footer-widgets/widget-tag-cloud.html %}
-      {% include footer-widgets/widget-subscribe.html %}
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="wordmark wordmark--lg" href="{{ '/' | relative_url }}">Hjalte <span>Bested Hjorth</span></a>
+      <p>{{ site.data.settings.tagline }}.</p>
+      <a class="site-footer__mail" href="mailto:{{ site.data.settings.email }}">{{ site.data.settings.email }}</a>
     </div>
-  </div>
-</section>
-<!-- end footer-widgets -->
 
-<!-- begin footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col col-12">
-      <div class="footer__inner">
-        <div class="copyright">{{ site.time | date: '%Y' }} &copy; <a href="{{ '/' | relative_url }}">{{ site.data.settings.title }}</a>. Crafted & Designed by <a href="https://www.roboticaudio.com">Hjalte Bested Hjorth</a>.</div>
-        {% include social-links.html %}
-        </div>
-      </div>
-    </div>
+    <nav class="site-footer__nav" aria-label="Footer">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      {% for item in site.data.settings.menu-items %}
+      {% if item.external %}
+      <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+      {% else %}
+      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endif %}
+      {% endfor %}
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
+      <a href="https://roboticaudio.com/">Robotic Audio</a>
+    </nav>
+
+    {% include social-links.html %}
+  </div>
+  <div class="site-footer__bottom">
+    <span>&copy; {{ site.time | date: '%Y' }} {{ site.data.settings.title }}</span>
+    <span>Part of <a href="https://roboticaudio.com/">Robotic Audio</a></span>
   </div>
 </footer>
-<!-- end footer -->

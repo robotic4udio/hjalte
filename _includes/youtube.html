@@ -1,0 +1,8 @@
+{%- comment -%}
+  Lightweight YouTube player: shows the thumbnail and only loads YouTube when clicked.
+  {% include youtube.html id="RqQnMvwpiNk" title="MoonWolf" %}
+  Optional: start="67" starts the video at 1:07 (in seconds).
+  Kept on a single line so it also works inside Markdown lists.
+{%- endcomment -%}
+<button class="yt" type="button" data-yt="{{ include.id }}"{% if include.start %} data-start="{{ include.start }}"{% endif %} aria-label="Play video: {{ include.title | default: 'video' | escape }}"><img src="https://i.ytimg.com/vi/{{ include.id }}/hqdefault.jpg" alt="" loading="lazy"><span class="yt__play"><i class="fa-solid fa-play"></i></span>{% if include.title %}<span class="yt__title">{{ include.title }}</span>{% endif %}</button>
+{%- comment -%} no trailing newline {%- endcomment -%}
