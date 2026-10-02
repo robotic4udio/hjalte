@@ -158,15 +158,15 @@ Advises about risks or negative outcomes of certain actions.
 
 <div class="gallery-box">
   <div class="gallery">
-    <img src="/images/501.jpg">
-    <img src="/images/901.jpg">
-    <img src="/images/509.jpg">
-    <img src="/images/511.jpg">
-    <img src="/images/520.jpg">
-    <img src="/images/516.jpg">
-    <img src="/images/517.jpg">
-    <img src="/images/519.jpg">
-    <img src="/images/521.jpg">
+    <img src="{{site.baseurl}}/images/501.jpg">
+    <img src="{{site.baseurl}}/images/901.jpg">
+    <img src="{{site.baseurl}}/images/509.jpg">
+    <img src="{{site.baseurl}}/images/511.jpg">
+    <img src="{{site.baseurl}}/images/520.jpg">
+    <img src="{{site.baseurl}}/images/516.jpg">
+    <img src="{{site.baseurl}}/images/517.jpg">
+    <img src="{{site.baseurl}}/images/519.jpg">
+    <img src="{{site.baseurl}}/images/521.jpg">
   </div>
   <em>Gallery / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
 </div>
@@ -174,15 +174,15 @@ Advises about risks or negative outcomes of certain actions.
 ```markdown
   <div class="gallery-box">
     <div class="gallery">
-      <img src="/images/501.jpg">
-      <img src="/images/901.jpg">
-      <img src="/images/509.jpg">
-      <img src="/images/511.jpg">
-      <img src="/images/520.jpg">
-      <img src="/images/516.jpg">
-      <img src="/images/517.jpg">
-      <img src="/images/519.jpg">
-      <img src="/images/521.jpg">
+      <img src="{{site.baseurl}}/images/501.jpg">
+      <img src="{{site.baseurl}}/images/901.jpg">
+      <img src="{{site.baseurl}}/images/509.jpg">
+      <img src="{{site.baseurl}}/images/511.jpg">
+      <img src="{{site.baseurl}}/images/520.jpg">
+      <img src="{{site.baseurl}}/images/516.jpg">
+      <img src="{{site.baseurl}}/images/517.jpg">
+      <img src="{{site.baseurl}}/images/519.jpg">
+      <img src="{{site.baseurl}}/images/521.jpg">
     </div>
     <em>Gallery / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
   </div>

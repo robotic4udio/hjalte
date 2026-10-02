@@ -27,7 +27,7 @@ If this project resonates with you, don’t hesitate to reach out! Whether you w
 
 #### Members of ReSound Lab
 Currently ReSound Lab consists of: 
-- [Hjalte Bested Hjorth (Robotic-Audio)](https://roboticaudio.com/about): Founder and initiator of the project. I am a composer, sound artist, robotics engineer, and creative technologist with a background in music composition, sound design, and interactive installations. My work merges art and technology, creating immersive experiences that push creative and technical boundaries.
+- [Hjalte Bested Hjorth (Robotic-Audio)]({{site.baseurl}}/about): Founder and initiator of the project. I am a composer, sound artist, robotics engineer, and creative technologist with a background in music composition, sound design, and interactive installations. My work merges art and technology, creating immersive experiences that push creative and technical boundaries.
 - [Jens Erik Larson (JEL Instruments)](https://www.jelinstruments.com/#about_me): Is a skilled instrument builder and musician with a background in lutherie, electronics, and experimental sound. He has a passion for creating unique instruments and exploring the boundaries of sound design.
 - [Anders Bo Erikson (Opica)](https://www.discogs.com/artist/9953923-Opica): Is a versatile musician and innovative producer, known for seamlessly blending acoustic and electronic soundscapes. Proficient in a range of instruments—including the cimbalom/dulcimer, percussion, and tuba—he combines his instrumental expertise with the limitless sonic possibilities of digital production.
 
@@ -58,12 +58,12 @@ I am currently in the process of preparing course matriel and workshop material 
 
 <div class="gallery-box">
   <div class="gallery">
-    <img src="/images/resound-lab/dalle-dcmotor.webp">
-    <img src="/images/resound-lab/dalle-harddrive.webp">
-    <img src="/images/resound-lab/dalle-pneumatic.webp">
-    <img src="/images/resound-lab/dalle-printer.webp">
-    <img src="/images/resound-lab/dalle-psufan.webp">
-    <img src="/images/resound-lab/dalle-tv-electronics.webp">
+    <img src="{{site.baseurl}}/images/resound-lab/dalle-dcmotor.webp">
+    <img src="{{site.baseurl}}/images/resound-lab/dalle-harddrive.webp">
+    <img src="{{site.baseurl}}/images/resound-lab/dalle-pneumatic.webp">
+    <img src="{{site.baseurl}}/images/resound-lab/dalle-printer.webp">
+    <img src="{{site.baseurl}}/images/resound-lab/dalle-psufan.webp">
+    <img src="{{site.baseurl}}/images/resound-lab/dalle-tv-electronics.webp">
   </div>
 </div>
 

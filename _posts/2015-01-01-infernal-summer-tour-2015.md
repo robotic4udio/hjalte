@@ -13,8 +13,8 @@ For Infernal’s **2015 summer tour**, I designed and built a series of **intera
 
 <div class="gallery-box">
   <div class="gallery">
-    <img src="/images/infernal/Poster1.jpg">
-    <img src="/images/infernal/Poster2.jpg">
+    <img src="{{site.baseurl}}/images/infernal/Poster1.jpg">
+    <img src="{{site.baseurl}}/images/infernal/Poster2.jpg">
   </div>
 </div>
 
@@ -32,9 +32,9 @@ For Infernal’s **2015 summer tour**, I designed and built a series of **intera
 
 <div class="gallery-box">
   <div class="gallery">
-    <img src="/images/infernal/Mohawk3.jpg">
-    <img src="/images/infernal/Mohawk4.jpg">
-    <img src="/images/infernal/Mohawk2.jpg">
+    <img src="{{site.baseurl}}/images/infernal/Mohawk3.jpg">
+    <img src="{{site.baseurl}}/images/infernal/Mohawk4.jpg">
+    <img src="{{site.baseurl}}/images/infernal/Mohawk2.jpg">
   </div>
 </div>
 
