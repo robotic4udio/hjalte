@@ -15,12 +15,12 @@ With the removal of criminal gangs and drug dealers from PusherStreet, Christian
 
 <div class="gallery-box">
     <div class="gallery">
-        <img src="/images/pusher-street/ChristianiaEntre.jpg">
-        <img src="/images/pusher-street/scanpix-20240406-170728-l.jpg">
-        <img src="/images/pusher-street/49105689a0ca8e18470757ba15c2de18.jpg">
-        <img src="/images/pusher-street/standard_20240406-172911-L-8640x5760ma.jpg">
-        <img src="/images/pusher-street/asset.dr.jpg">
-        <img src="/images/pusher-street/Pusherstreet ryddes og graves op.jpg">
+        <img src="{{site.baseurl}}/images/pusher-street/ChristianiaEntre.jpg">
+        <img src="{{site.baseurl}}/images/pusher-street/scanpix-20240406-170728-l.jpg">
+        <img src="{{site.baseurl}}/images/pusher-street/49105689a0ca8e18470757ba15c2de18.jpg">
+        <img src="{{site.baseurl}}/images/pusher-street/standard_20240406-172911-L-8640x5760ma.jpg">
+        <img src="{{site.baseurl}}/images/pusher-street/asset.dr.jpg">
+        <img src="{{site.baseurl}}/images/pusher-street/Pusherstreet ryddes og graves op.jpg">
     </div>
         <p class="gallery-caption" style="text-align: center;">Pusher Street is dismantled, removing gangs, making space for new possibilities</p>
 </div>
@@ -33,8 +33,8 @@ Encased in a glass vitrine, the installation features three identical electro-ac
 
 <div class="gallery-box">
   <div class="gallery">
-    <img src="/images/pusher-street/JPEG-billede-4AC5-B976-19-0.jpg">
-    <img src="/images/pusher-street/JPEG-billede-4D71-9138-F4-0.jpg">
+    <img src="{{site.baseurl}}/images/pusher-street/JPEG-billede-4AC5-B976-19-0.jpg">
+    <img src="{{site.baseurl}}/images/pusher-street/JPEG-billede-4D71-9138-F4-0.jpg">
   </div>
     <p class="gallery-caption" style="text-align: center;">Resonance of Change - Concept Drawings</p>
 </div>
@@ -53,15 +53,15 @@ By placing this installation in PusherStreet, it merges high-tech experimentatio
 
 <div class="gallery-box">
   <div class="gallery">
-    <img src="/images/pusher-street/IMG_79C2FBD79F94-1.jpeg">
-    <img src="/images/pusher-street/IMG_335CA656A638-1.jpeg">
+    <img src="{{site.baseurl}}/images/pusher-street/IMG_79C2FBD79F94-1.jpeg">
+    <img src="{{site.baseurl}}/images/pusher-street/IMG_335CA656A638-1.jpeg">
   </div>
 </div>
 
 <div class="gallery-box">
   <div class="gallery">
-    <img src="/images/pusher-street/JPEG-billede-4CE9-8C7C-71-0.jpeg">
-    <img src="/images/pusher-street/JPEG-billede-4508-8123-7E-0.jpeg">
+    <img src="{{site.baseurl}}/images/pusher-street/JPEG-billede-4CE9-8C7C-71-0.jpeg">
+    <img src="{{site.baseurl}}/images/pusher-street/JPEG-billede-4508-8123-7E-0.jpeg">
   </div>
     <p class="gallery-caption" style="text-align: center;">Prototyping and Construction</p>
 </div>

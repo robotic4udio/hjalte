@@ -21,12 +21,12 @@ image: '/images/jul24/TrorkJul3.jpg'
 - 2024-12-24 [Juleløses Jul 2024]( https://www.juleloesesjul.com/galleri-1/2024?itemId=zatds3bzprf24hd298fc670k49vnc0)
   <div class="gallery-box">
     <div class="gallery">
-      <img src="/images/jul24/TrorkJul14.jpg">
-      <img src="/images/jul24/TrorkJul13.jpg">
-      <img src="/images/jul24/TrorkJul15.jpg">
-      <img src="/images/jul24/TrorkJul1.jpg">
-      <img src="/images/jul24/TrorkJul10.jpg">
-      <img src="/images/jul24/TrorkJul11.jpg">
+      <img src="{{site.baseurl}}/images/jul24/TrorkJul14.jpg">
+      <img src="{{site.baseurl}}/images/jul24/TrorkJul13.jpg">
+      <img src="{{site.baseurl}}/images/jul24/TrorkJul15.jpg">
+      <img src="{{site.baseurl}}/images/jul24/TrorkJul1.jpg">
+      <img src="{{site.baseurl}}/images/jul24/TrorkJul10.jpg">
+      <img src="{{site.baseurl}}/images/jul24/TrorkJul11.jpg">
     </div>
       <em><a href="{{site.baseurl}}/">Tromleorkestret</a> with <a href="https://www.facebook.com/rosyanmusic">rosyán</a> @ <a href="https://www.juleloesesjul.com/">Juleløses Jul</a> // Photos by Jens Raadal </em>
   </div>
@@ -99,15 +99,15 @@ image: '/images/jul24/TrorkJul3.jpg'
 - 2016-07-01 [Fusion Festival 2016](https://www.facebook.com/events/974064902647964/)
   <div class="gallery-box">
     <div class="gallery">
-      <img src="/images/fusion/DSC6086.jpg">
-      <img src="/images/fusion/DSC6244.jpg">
-      <img src="/images/fusion/DSC6183.jpg">
-      <img src="/images/fusion/DSC6404.jpg">
-      <img src="/images/fusion/DSC6201.jpg">
-      <img src="/images/fusion/DSC6598.jpg">
-      <img src="/images/fusion/DSC6198.jpg">
-      <img src="/images/fusion/DSC6128.jpg">
-      <img src="/images/fusion/DSC6600.jpg">
+      <img src="{{site.baseurl}}/images/fusion/DSC6086.jpg">
+      <img src="{{site.baseurl}}/images/fusion/DSC6244.jpg">
+      <img src="{{site.baseurl}}/images/fusion/DSC6183.jpg">
+      <img src="{{site.baseurl}}/images/fusion/DSC6404.jpg">
+      <img src="{{site.baseurl}}/images/fusion/DSC6201.jpg">
+      <img src="{{site.baseurl}}/images/fusion/DSC6598.jpg">
+      <img src="{{site.baseurl}}/images/fusion/DSC6198.jpg">
+      <img src="{{site.baseurl}}/images/fusion/DSC6128.jpg">
+      <img src="{{site.baseurl}}/images/fusion/DSC6600.jpg">
     </div>
       <em><a href="{{site.baseurl}}/">Tromleorkestret</a> with <a href="https://www.facebook.com/rosyanmusic">rosyán</a> and the <a href="https://www.facebook.com/pyromaniacs.dk/">Pyromaniacs</a> @ <a href="https://www.fusion-festival.de/en">Fusion Festival </a></em>
   </div>
